@@ -1,0 +1,41 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Roboto, "Open Sans", sans-serif;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container h3 {
+  margin-bottom: 7px;
+}
+
+.container textarea {
+  border-radius: 7px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.container div {
+  margin: 15px;
+}
+
+.container div span {
+  padding: 7px 10px;
+  border-radius: 10px;
+  color: white;
+  background-color: rgba(19, 87, 214, 0.856);
+  margin-left: 10px;
+}
+
+.highlight {
+  background-color: rgba(11, 51, 126, 0.856) !important;
+}

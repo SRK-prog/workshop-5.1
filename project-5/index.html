@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="card" class="card">
+      <img src="./Horse.jpg" class="card-img" alt="" />
+      <div class="card-body" style="padding: 10px">
+        <h3 style="margin-block: 8px">Title</h3>
+        <p class="card-text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe aliquam
+          provident quod porro, soluta sunt magnam accusamus est ullam magni.
+        </p>
+      </div>
+    </div>
+    <div id="card-animation" class="loading-container">
+      <div class="image-loading"></div>
+      <div class="title-loading"></div>
+      <div class="text-loading"></div>
+      <div class="text-loading"></div>
+      <div class="text-loading"></div>
+      <div class="animation"></div>
+    </div>
+    <script>
+      var loading = document.getElementById("card-animation");
+      var card = document.getElementById("card");
+      setTimeout(() => {
+        card.style.display = "block";
+        loading.style.display = "none";
+      }, 2000);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.card {
+  max-width: 22rem;
+  margin: auto;
+  margin-top: 200px;
+  border-radius: 9px;
+  border: 1px solid rgb(224, 224, 224);
+  display: none;
+}
+
+.card-img {
+  object-fit: contain;
+  width: 100%;
+}
+
+.card-text {
+  margin-bottom: 13px;
+}
+
+.loading-container {
+  max-width: 22rem;
+  height: 350px;
+  margin: auto;
+  margin-top: 200px;
+  border-radius: 9px;
+  border: 1px solid rgb(224, 224, 224);
+  position: relative;
+  overflow: hidden;
+}
+
+.image-loading {
+  background-color: rgb(230, 230, 230);
+  height: 190px;
+  width: 100%;
+}
+
+.title-loading {
+  height: 18px;
+  width: 25%;
+  background-color: rgb(230, 230, 230);
+  margin: 15px 10px;
+}
+
+.text-loading {
+  height: 18px;
+  background-color: rgb(230, 230, 230);
+  margin: 10px 10px 0 10px;
+}
+
+.animation {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    to right,
+    #f6f7f879 0%,
+    #edeef179 10%,
+    #f6f7f888 20%,
+    #f6f7f84f 100%
+  );
+  background-size: 200% 100%;
+  top: 0;
+  animation: slide 1s linear infinite;
+}
+
+@keyframes slide {
+  0% {
+    background-position: 50% 0;
+  }
+
+  100% {
+    background-position: -150% 0;
+  }
+}

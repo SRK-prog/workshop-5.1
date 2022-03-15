@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>workshop-5.1</title>
+  </head>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: "Ubuntu", "Open Sans", sans-serif;
+      height: 100vh;
+      width: 100vw;
+      position: relative;
+    }
+    .loading {
+      color: white;
+      font-size: 50px;
+      position: absolute;
+      z-index: 999;
+      opacity: 1;
+    }
+    .background {
+      background-image: url(./dmitri-zotov-KB8WaHZxp8w-unsplash.jpg);
+      background-position: center center;
+      background-repeat: no-repeat;
+      height: 100vh;
+      width: 100vw;
+      position: absolute;
+      z-index: -999;
+      filter: blur(0px);
+    }
+  </style>
+  <body>
+    <section id="bg" class="background"></section>
+    <div id="loadcount" class="loading">0%</div>
+    <script>
+      var loading = 0;
+
+      var loadcount = document.getElementById("loadcount");
+
+      var blurScreen = document.getElementById("bg");
+
+      let int = setInterval(blurring, 30);
+
+      function blurring() {
+        loading++;
+        if (loading > 99) {
+          clearInterval(int);
+        }
+        loadcount.innerText = loading + "%";
+        loadcount.style.opacity = scale(loading, 0, 100, 1, 0);
+        blurScreen.style.filter = `blur(${scale(loading, 0, 100, 30, 0)}px)`;
+      }
+      function scale(num, in_min, in_max, out_min, out_max) {
+        return (
+          ((num - in_min) * (out_max - out_min)) / (in_max - in_min) + out_min
+        );
+      }
+    </script>
+  </body>
+</html>
